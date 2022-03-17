@@ -1,0 +1,337 @@
+/* start varible */
+:root {
+  --main-color: rgb(38, 167, 218);
+  --second-color: rgb(17, 16, 16);
+}
+/* end varible */
+/* start global rule  */
+* {
+  box-sizing: border-box;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* end global rule  */
+/* start header  */
+.header {
+  height: 150px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.header .content {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+}
+.header .logo img {
+  height: 100px;
+}
+.header .info i {
+  position: relative;
+  top: 62%;
+  transform: translateY(-50%);
+  left: -79px;
+  font-size: 35px;
+  color: var(--main-color);
+}
+.header .info p {
+  font-size: 25px;
+  margin-top: 15px;
+  color: white;
+}
+@media (max-width: 767px) {
+  .header .info i {
+    display: none;
+  }
+  .header .info p {
+    margin-top: 45px;
+  }
+  .header {
+    width: 100%;
+  }
+}
+/* end header  */
+/* start landing */
+.landing {
+  padding-top: 130px;
+  background-image: url(../images/landing.jfif);
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .landing {
+    height: 863px;
+  }
+}
+.landing::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background-color: rgb(0, 0, 0, 50%);
+}
+.landing .content {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  z-index: 2;
+  flex-wrap: wrap;
+}
+@media (max-width: 767px) {
+  .landing .content {
+    flex-direction: column;
+  }
+}
+.landing .text {
+  color: white;
+  padding: 85px 0 0 120px;
+  flex-basis: 45%;
+}
+@media (max-width: 767px) {
+  .landing .text {
+    padding: 0;
+    text-align: center;
+  }
+}
+.landing .text h3 {
+  font-size: 40px;
+}
+.landing .text p {
+  color: #cbcbcb;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.landing .text a {
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 20px;
+}
+.landing .card {
+  flex-basis: 35%;
+  background-color: var(--main-color);
+  margin-right: 4%;
+  margin-top: 60px;
+  border-radius: 15px;
+}
+@media (max-width: 767px) {
+  .landing .card {
+    width: 60%;
+    margin: 35px auto;
+  }
+}
+.landing .card h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  margin-bottom: 0;
+}
+.landing .card p {
+  text-align: center;
+  color: white;
+  font-size: 14px;
+}
+.landing .card .fr {
+  display: block;
+  padding: 8px;
+  margin: 15px auto;
+  width: 80%;
+  border-radius: 20px;
+}
+.landing .card .fr:focus {
+  outline: none;
+}
+.landing .card input[type="submit"] {
+  display: block;
+  background-color: var(--second-color);
+  color: white;
+  width: 80%;
+  margin: 15px auto;
+  padding: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 20px;
+}
+/* end landing */
+/* start goes */
+.goes {
+  background-color: var(--second-color);
+  color: white;
+}
+.goes .head h2 {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 30px;
+  margin: 0;
+}
+.goes .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.goes .content .card {
+  flex-basis: 320px;
+}
+.goes .content i {
+  font-size: 35px;
+  background-color: var(--main-color);
+  padding: 15px;
+  border-radius: 50%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.goes .content h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+.goes .content p {
+  text-align: center;
+  color: #777;
+}
+/* end goes */
+/* start employer */
+.employer .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+.employer .image {
+  flex-basis: 350px;
+}
+.employer .image img {
+  width: 100%;
+}
+.employer .text {
+  flex-basis: 400px;
+}
+.employer .text h2 {
+  text-transform: uppercase;
+  width: 60%;
+}
+.employer .text p {
+  color: #777;
+  line-height: 1.2;
+}
+.employer .text a {
+  text-decoration: none;
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+/* end employer */
+/* start client */
+.client {
+  background-color: var(--second-color);
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+.client .content {
+  width: 80%;
+  margin: 0 auto;
+}
+.client h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.client q {
+  font-size: 65px;
+  font-weight: 900;
+}
+.client .n1 {
+  color: #777;
+  line-height: 1.6;
+  font-size: 14px;
+  border-bottom: white 1px solid;
+  padding-bottom: 15px;
+}
+.client .n2 {
+  color: var(--main-color);
+  font-size: 20px;
+}
+/* end client */
+/* start the end  */
+.fin .content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.fin .text {
+  flex-basis: 60%;
+}
+.fin .text h3 {
+  font-size: 35px;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 60%;
+}
+.fin .text p {
+  color: #777;
+  line-height: 1.3;
+}
+.fin .images {
+  flex-basis: 35%;
+}
+.fin .images img {
+  width: 100%;
+  margin-top: 60%;
+}
+.fin a {
+  background-color: var(--main-color);
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 40px;
+  margin: 20px 0;
+}
+/* end the end  */
+/* start footer  */
+.footer {
+  background-color: var(--second-color);
+  color: white;
+}
+.footer p {
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+}
+/* end footer  */
